@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
 
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadScene(1);
     }
 
 
@@ -18,12 +18,12 @@ public class MainMenu : MonoBehaviour
         if (PlayerPrefs.HasKey(resumeKey))
         {
             int resumeSceneIndex = PlayerPrefs.GetInt(resumeKey);
-            SceneManager.LoadSceneAsync(resumeSceneIndex);
+            SceneManager.LoadScene(resumeSceneIndex);
         }
         else
         {
            
-            SceneManager.LoadSceneAsync(defaultSceneIndex);
+            SceneManager.LoadScene(defaultSceneIndex);
         }
     }
     public void QuitGame()
