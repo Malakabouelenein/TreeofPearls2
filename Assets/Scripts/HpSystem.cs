@@ -37,7 +37,7 @@ public class HpSystem : MonoBehaviour
         {
             if (i < playerHp)
             {
-                HpBar[i].color = Color.red;
+                HpBar[i].color = Color.white;
             }
             else
             {
