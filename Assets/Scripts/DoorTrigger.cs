@@ -7,6 +7,7 @@ public class DoorTrigger : MonoBehaviour
     public float fadeDuration = 1.0f;
     public bool waitForFade = true;
     public Animator animator;
+    public  GameObject gb;
 
     private void Start()
     {
@@ -18,7 +19,7 @@ public class DoorTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            
+            gb.SetActive(true);
                 animator.SetBool("fade", true);
                 Invoke("LoadSceneAfterDelay", fadeDuration);
             
