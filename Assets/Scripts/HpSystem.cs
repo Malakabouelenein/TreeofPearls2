@@ -15,6 +15,7 @@ public class HpSystem : MonoBehaviour
     private Animator playerAnimator;
     private bool isAttacking = false;
     public bool isHurt = false;
+   
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class HpSystem : MonoBehaviour
         UpdateHealth();
 
     }
+
 
     public void UpdateHealth()
     {
@@ -34,7 +36,12 @@ public class HpSystem : MonoBehaviour
             playerAnimator.SetBool("Jump Up", false);
             playerAnimator.SetBool("Jump Down", false);
             playerAnimator.SetBool("die", true);
+
+            AudioManager.instance.Play("DeathSFX");
+            AudioManager.instance.Stop("Level1BGM");
+            AudioManager.instance.Stop("HitSFX");
             Invoke("RestartScene", 3);
+            Invoke("StopDeathSFX", 0.7f);
         }
 
         for (int i = 0; i < HpBar.Length; i++)
@@ -55,6 +62,7 @@ public class HpSystem : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") && !isAttacking && !isHurt)
         {
             playerAnimator.SetBool("hurt", true);
+            AudioManager.instance.Play("HitSFX");
             isHurt = true;
             InvokeRepeating("TakeDamage", 1f, 1f);
         }
@@ -65,6 +73,7 @@ public class HpSystem : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
        {
             playerAnimator.SetBool("hurt", false);
+            AudioManager.instance.Stop("HitSFX");
            isHurt = false;
            CancelInvoke("TakeDamage");
         }
@@ -104,5 +113,10 @@ public class HpSystem : MonoBehaviour
     {
         // Restart the scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+     void StopDeathSFX()
+    {
+        AudioManager.instance.Stop("DeathSFX");
     }
 }

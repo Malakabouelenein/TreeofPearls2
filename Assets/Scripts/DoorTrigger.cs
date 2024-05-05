@@ -21,6 +21,8 @@ public class DoorTrigger : MonoBehaviour
         {
             gb.SetActive(true);
                 animator.SetBool("fade", true);
+                AudioManager.instance.Stop("Level1BGM");
+                AudioManager.instance.Play("SucessSFX");
                 Invoke("LoadSceneAfterDelay", fadeDuration);
             
         }

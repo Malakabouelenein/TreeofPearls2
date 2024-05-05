@@ -20,6 +20,7 @@ public class PlayerCollection : MonoBehaviour
         if (other.CompareTag("coin"))
         {
             CollectCoin(other.gameObject);
+            AudioManager.instance.Play("PearlSFX");
         }
     }
 
