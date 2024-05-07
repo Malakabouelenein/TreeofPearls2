@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.34117648, g: 0.34117648, b: 0.34117648, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -372,12 +372,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Congratulations on escaping imprisonment from the Northern Tower!\n\nBut
-    your journey is not over yet\u2026\n\n\nNow you must face the wrath of Om Ali
-    and her deadly Ob2ab\n\nWhen the timer ends, you have a chance to reach Om Ali
-    and defeat her before she seals your fate \n\nBe mindful of your life count and
-    be ready to face familiar foes\n\n*there are no pauses here, it\u2019s kill or
-    be killed "
+  m_text: 'You saved Shajarat Al-Dur!
+
+
+    Unfortunately, history was not as kind
+    to the Sultana and Om Ali did kill her because of her ambitions and acts of treason
+
+
+    but
+    hey, at least you saved her in this version of the story :)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1e6b57acd8044effb1a48137ab11441, type: 2}
   m_sharedMaterial: {fileID: -41285970462027713, guid: c1e6b57acd8044effb1a48137ab11441, type: 2}
@@ -404,8 +407,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.2
-  m_fontSizeBase: 48.2
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -440,7 +443,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -615.4548, y: 0, z: -481.58594, w: -676.85864}
+  m_margin: {x: -615.4548, y: 0, z: -481.58594, w: -349.1253}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -482,7 +485,7 @@ RectTransform:
   m_GameObject: {fileID: 1316394665}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1326, y: 1.1326, z: 1.1326}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2095353070}
@@ -490,7 +493,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 33.3, y: -21.8}
+  m_AnchoredPosition: {x: 1.5, y: -21.8}
   m_SizeDelta: {x: 11.2, y: 5.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1316394667
@@ -781,7 +784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2095353071
@@ -804,7 +807,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Exit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c1e6b57acd8044effb1a48137ab11441, type: 2}
   m_sharedMaterial: {fileID: -41285970462027713, guid: c1e6b57acd8044effb1a48137ab11441, type: 2}
@@ -831,8 +834,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 2.74
-  m_fontSizeBase: 2.74
+  m_fontSize: 3.8
+  m_fontSizeBase: 3.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
