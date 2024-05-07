@@ -1,16 +1,19 @@
+using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+   public GameObject SplashScreen;
     private const string resumeKey = "resumeSceneIndex";
     private int defaultSceneIndex = 1;
     public void PlayGame()
     {
         AudioManager.instance.Stop("MainBGM");
         AudioManager.instance.Play("ConfirmSFX");
-        SceneManager.LoadScene(1);
+        SplashScreen.SetActive(true);
+        
     }
 
 

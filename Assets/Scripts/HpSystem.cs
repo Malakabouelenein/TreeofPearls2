@@ -66,7 +66,19 @@ public class HpSystem : MonoBehaviour
             isHurt = true;
             InvokeRepeating("TakeDamage", 1f, 1f);
         }
+if (collision.gameObject.CompareTag("oba2b") )
+        {
+            playerAnimator.SetBool("hurt", true);
+            AudioManager.instance.Play("HitSFX");
+            isHurt = true;
+            TakeDamage();
+        }
+
+
+
+
     }
+    
 
     private void OnTriggerExit2D(Collider2D collision)
     {

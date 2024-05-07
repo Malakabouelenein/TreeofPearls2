@@ -10,6 +10,7 @@ TagManager:
   - trap
   - coin
   - HitBox
+  - oba2b
   layers:
   - Default
   - TransparentFX
